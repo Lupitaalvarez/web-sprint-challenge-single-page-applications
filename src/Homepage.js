@@ -1,6 +1,7 @@
 import React from 'react';
  import styled from "styled-components"
  import './App.css';
+ import { Route, Link } from "react-router-dom";
 
 
 
@@ -9,7 +10,9 @@ import React from 'react';
      return(
  <Head>
  <h1>Welcome to Tito's pizzeria online!</h1>
-
+ <Link to="/pizza"> 
+       <button name = 'order-pizza'>Place Your Order</button>
+     </Link>
  <h2>Select "place your order" to place an order. enjoy!</h2>
  </Head>
      )

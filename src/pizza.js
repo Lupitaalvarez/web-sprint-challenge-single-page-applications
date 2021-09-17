@@ -115,7 +115,7 @@ import React, {useState, useEffect} from 'react';
      return(
 
 
-         <form onSubmit = {formSubmit}>
+         <form id= "pizza-form" onSubmit = {formSubmit}>
          <Display>
              <h1 id="order">Order now!</h1>
              <label htmlFor = 'name'>
@@ -124,10 +124,13 @@ import React, {useState, useEffect} from 'react';
                  <input
                  type = 'text'
                  name = 'name'
-                 id = 'nameinput'
+                 id = 'name-input'
                  placeholder = 'Name'
                  value={formState.name}
                  onChange={inputChange}
+                 required= {true}
+                 minLength= '2'
+                 
                  />
              </label>
 
@@ -135,7 +138,7 @@ import React, {useState, useEffect} from 'react';
              <label htmlFor = 'size'>
                  <h1>Size?</h1>
                  <br/>
-                 <select name = 'size' id = 'sizeinput' onChange = {inputChange}>
+                 <select name = 'size' id = 'size-dropdown' onChange = {inputChange}>
                      <option name="default" value={null}></option>
                      <option name="Sm" value='Sm'>Small</option>
                      <option name="Md" value='Md'>Medium</option>
@@ -202,9 +205,9 @@ import React, {useState, useEffect} from 'react';
              <label htmlFor = 'Special Instructions'>
                  <h1>Anything else you would like us to know?</h1>
                  <br/>
-                 <textarea
+                 <input
                  name = 'specInstr'
-                 id = 'specInstrInput'
+                 id = 'special-text'
                  placeholder = 'Type instructions here...'
                  value={formState.specInstr} 
                  onChange={inputChange}

@@ -1,6 +1,6 @@
 import React from "react";
 import Pizza from './pizza'
-import Home from './home'
+import Home from './Homepage'
 import { Route, Link } from "react-router-dom";
 import './App.css';
 
@@ -14,7 +14,7 @@ const App = () => {
      </Link>
      <br/>
      <Link to="/pizza"> 
-       <button name = 'orderbutton'>Place Your Order</button>
+       <button id = 'order-pizza'>Place Your Order</button>
      </Link>
      </nav>
 
